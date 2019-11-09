@@ -2,6 +2,7 @@
   "name": "maoer/pay",
   "description": "猫耳支付PHP版SDK，猫耳支付专注于微信个人免签支付支付，与微信官方服务器直连，微信官方负责资金清算。猫耳支付非第三方更不是第四方，请放心使用。",
   "keywords": ["MaoerPay"],
+  "minimum-stability": "dev",
   "homepage": "https://www.maoerpay.com/",
   "authors": [
     {
@@ -19,6 +20,7 @@
   "require": {
     "php": ">=5.6"
   },
+  "require": {},
   "version": "1.0.1",
   "autoload": {
     "psr-4": {
