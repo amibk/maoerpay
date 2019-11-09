@@ -1,10 +1,10 @@
 <?php
 
 
-namespace MaoerPay;
+namespace maoerpay;
 
-use MaoerPay\MaoerBase;
-use MaoerPay\rsa2;
+use maoerpay\MaoerBase;
+use maoerpay\rsa2;
 /**
  * 猫耳支付交易处理
  * Class Trade
