@@ -1,8 +1,8 @@
 <?php
 
-namespace MaoerPay;
+namespace maoerpay;
 
-use Maoerpay\rsa2;
+use maoerpay\rsa2;
 /**
  * 猫耳支付基类
  * Class MaoerBase
