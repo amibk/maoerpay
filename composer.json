@@ -1,0 +1,28 @@
+{
+  "name": "maoer/pay",
+  "description": "MaoerPay SDK",
+  "keywords": ["MaoerPay"],
+  "homepage": "https://www.maoerpay.com/",
+  "authors": [
+    {
+      "name": "Bao Mei",
+      "email": "ityun@vip.qq.com",
+      "homepage": "https://www.amibk.com"
+    }
+  ],
+  "support": {
+    "email": "meibao@maoer.net.cn",
+    "forum": "https://bbs.open.maoer.net.cn",
+    "wiki": "http://doc.maoer.net.cn"
+  },
+  "license": "MIT",
+  "require": {
+    "php": ">=5.6"
+  },
+  "version": "1.0.1",
+  "autoload": {
+    "psr-4": {
+      "MaoerPay\\": "src/"
+    }
+  }
+}
