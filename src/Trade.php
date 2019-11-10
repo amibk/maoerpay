@@ -36,9 +36,9 @@ class Trade extends MaoerBase
         return $result;
     }
     public function jsapi(array $params){
-        if ($params['trade_type'] == "JSAPI" && empty($params['trade_type'])){
+        if ($params['trade_type'] == "JSAPI" && empty($params['openid'])){
             return 'JSAPI支付时，openid为必传参数';
-        }elseif ($params['NATIVE'] == "NATIVE" && empty($params['product_id'])){
+        }elseif ($params['trade_type'] == "NATIVE" && empty($params['product_id'])){
             return 'NATIVE支付时，product_id为必传参数';
         }
         $params['mchid'] = $this->mch_id;
@@ -48,7 +48,7 @@ class Trade extends MaoerBase
         return $result;
     }
     public function order_query(array $params){
-        if (empty($params['out_trade_no']) && empty($params['trade_type'])) return 'out_trade_no和maoer_id不能同时为空';
+        if (empty($params['out_trade_no']) && empty($params['maoer_id'])) return 'out_trade_no和maoer_id不能同时为空';
         $params['mchid'] = $this->mch_id;
         $sign = $this->sign($params);
         $params['sign'] = $sign;
@@ -72,7 +72,7 @@ class Trade extends MaoerBase
         return $result;
     }
     public function refund(array $params){
-        $params['refund_desc'] = empty($params['refund_desc']) ? "正常退款" : $params['refund_desc'];
+        if ($params['refund_desc']) $params['refund_desc'] = "正常退款";
         $params['mchid'] = $this->mch_id;
         $sign = $this->sign($params);
         $params['sign'] = $sign;
